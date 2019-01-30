@@ -329,7 +329,7 @@
                 NSString *urlString = screenshots[i];
                 NSURL *url = [NSURL URLWithString:urlString];
                 
-                [[SDWebImageManager sharedManager] downloadImageWithURL:url options:SDWebImageContinueInBackground progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                [[[SDWebImageManager sharedManager] imageDownloader] downloadImageWithURL:url options:SDWebImageDownloaderContinueInBackground progress:NULL completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
                     if (image) {
                         if (image.size.width > image.size.height) {
                             if (i == 0) {
@@ -340,6 +340,7 @@
                             [cell setPortraitScreenshot:image position:i];
                         }
                     }
+
                 }];
             }
         }
