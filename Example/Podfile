@@ -2,11 +2,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 platform :ios, '7.0'
 
-target 'FTMoreApps_Example', :exclusive => true do
+target 'FTMoreApps_Example' true do
   pod "FTMoreApps", :path => "../"
 end
 
-target 'FTMoreApps_Tests', :exclusive => true do
+target 'FTMoreApps_Tests' true do
   pod "FTMoreApps", :path => "../"
 
   pod 'Specta'
