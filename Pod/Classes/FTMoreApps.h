@@ -11,7 +11,7 @@
 #import "FTMoreAppsViewController.h"
 
 typedef void (^FTDismissBlock)();
-typedef void (^FTSelectBlock)(NSString *appId);
+typedef void (^FTSelectBlock)(NSNumber *appId);
 
 @interface FTMoreApps : NSObject
 
